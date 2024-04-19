@@ -28,6 +28,16 @@ class Appointments extends Component {
     return appointmentList
   }
 
+  getFilterredAppointments = () => {
+    const {appointmentList, isStar} = this.state
+    if (isStar) {
+      return appointmentList.filter(
+        eachAppointment => eachAppointment.isStarred === true,
+      )
+    }
+    return appointmentList
+  }
+
   onAddAppointment = event => {
     event.preventDefault()
     const {inputTitle, inputDate} = this.state
@@ -54,8 +64,9 @@ class Appointments extends Component {
   }
 
   render() {
-    const {appointmentList, inputTitle, inputDate, isStar} = this.state
+    const {inputTitle, inputDate, isStar} = this.state
     const starredbuttonClassName = isStar ? 'starred-btn' : 'unstarred-btn'
+    const filterredAppointments = this.getFilterredAppointments()
     return (
       <div className="app-container">
         <div className="appointment-container">
@@ -82,7 +93,7 @@ class Appointments extends Component {
                 value={inputDate}
                 onChange={this.onChangeDate}
               />
-              <button type="submit" className="add-btn">
+              <button type="submit" className="add-btn" data-testid="star">
                 Add
               </button>
             </div>
@@ -99,13 +110,12 @@ class Appointments extends Component {
               type="button"
               className={starredbuttonClassName}
               onClick={this.onStarredAppointments}
-              data-testid="star"
             >
               Starred
             </button>
           </div>
           <ul className="appointments-container">
-            {appointmentList.map(eachAppointment => (
+            {filterredAppointments.map(eachAppointment => (
               <AppointmentItem
                 key={eachAppointment.id}
                 appointmentDetails={eachAppointment}

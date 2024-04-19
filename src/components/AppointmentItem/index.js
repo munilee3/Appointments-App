@@ -21,6 +21,7 @@ const AppointmentItem = props => {
           alt="star"
           onClick={onClickStarred}
           className="stare-btn"
+          data-testid="star"
         />
       </div>
       <p className="appointment-date">{appointmentDate}</p>

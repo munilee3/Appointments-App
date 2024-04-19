@@ -24,8 +24,8 @@
   font-family: 'roboto';
   margin-top: 0;
 }
-@media screen and (min-width:768px) {
-  .appointment-list-contianer{
-    width: 235px;
+@media screen and (min-width: 768px) {
+  .appointment-list-contianer {
+    width: 300px;
   }
 }
