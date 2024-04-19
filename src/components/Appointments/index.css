@@ -1,0 +1,109 @@
+.app-container {
+  background-image: linear-gradient(to bottom, #fbc7d4, #9796f0);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appointment-container {
+  width: 90%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 40px;
+}
+.title {
+  font-family: 'roboto';
+  font-size: 27px;
+  color: #171f46;
+}
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-title {
+  color: #b5b7c4;
+  font-family: 'roboto';
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+.form-date {
+  color: #b5b7c4;
+  font-family: 'roboto';
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+.input-title {
+  width: 100%;
+  outline: none;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.input-date {
+  width: 100%;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.add-btn {
+  background-color: #8b5cf6;
+  color: #ffffff;
+  font-family: 'roboto';
+  border: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 18px;
+  padding-left: 18px;
+  border-radius: 8px;
+}
+.appointments-image {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .appointments-image {
+    display: block;
+    align-items: center;
+  }
+}
+.horizontal-line {
+  border: 1px solid #b5b7c4;
+  margin-top: 20px;
+}
+.appointments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.starred-btn {
+  border: 1px solid #9897f0;
+  color: #ffffff;
+  background-color: #9897f0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 30px;
+  font-family: 'roboto';
+}
+.unstarred-btn {
+  background-color: transparent;
+  color: #9897f0;
+  border: 1px solid #9897f0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 30px;
+  font-family: 'roboto';
+}
+.appointments-container {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  padding-left: 0;
+}

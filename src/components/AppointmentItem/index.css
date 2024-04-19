@@ -1,0 +1,31 @@
+.appointment-list-contianer {
+  border: 1px solid #b5b7c4;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+}
+.title-stare-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.appointment-title {
+  color: #171f46;
+  font-weight: 500;
+  font-family: 'roboto';
+}
+.stare-btn {
+  outline: none;
+  cursor: pointer;
+}
+.appointment-date {
+  color: #b5b7c4;
+  font-family: 'roboto';
+  margin-top: 0;
+}
+@media screen and (min-width:768px) {
+  .appointment-list-contianer{
+    width: 235px;
+  }
+}
